@@ -1,0 +1,8 @@
+
+OLED 0.96inch SSD1306
+library: Adafruit Python SSD1306
+https://www.raspberrypi-spy.co.uk/2018/04/i2c-oled-display-module-with-raspberry-pi/
+
+OLED 1.3inch SH1106
+library: Luma.oled
+https://luma-oled.readthedocs.io/en/latest/index.html

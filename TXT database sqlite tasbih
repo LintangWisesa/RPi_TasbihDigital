@@ -1,0 +1,30 @@
+SQLite3
+
+https://randomnerdtutorials.com/sqlite-database-on-a-raspberry-pi/
+https://docs.python.org/3/library/sqlite3.html#
+
+======================================================
+1. install SQLite on a Raspberry Pi using this command:
+
+$ sudo apt-get install sqlite3
+
+======================================================
+2. working with a database
+
+$ sqlite3 tasbih.db
+
+create table tasbihcount (
+    id integer primary key autoincrement,
+    tasbih int,
+    tanggal date default CURRENT_DATE
+);
+
+.tables
+
+.fullschema
+
+insert into tasbihcount (tasbih) values (1);
+
+select tanggal, sum(tasbih) from tasbihcount group by tanggal;
+
+.quit
