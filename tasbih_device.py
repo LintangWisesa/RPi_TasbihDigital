@@ -34,7 +34,8 @@ while True:
     if GPIO.input(8) == GPIO.HIGH:
         x += 1
         print(f"Sensor was touched {x} times")
-        c.execute('insert into tasbihcount (tasbih) values (1)')
+        # c.execute("insert into tasbihcount (tasbih) values (1)")
+        c.execute("insert into tasbihcount (tasbih, tanggal) values (1, date('now', 'localtime'))")
         conn.commit()
         with canvas(device) as draw:
             font1 = ImageFont.truetype('./impact.ttf',18)
